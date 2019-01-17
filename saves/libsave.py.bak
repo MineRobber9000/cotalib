@@ -1,0 +1,7 @@
+import luaparse
+
+class LuaImporter:
+	@classmethod
+	def _import(cls,data):
+		ret = luaparse.parse(data)
+		return ret
