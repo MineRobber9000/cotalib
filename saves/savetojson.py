@@ -6,4 +6,6 @@ with open("examplelua.save") as f:
 #print("BASE SAVE")
 test = Save.from_lua(example)
 print(",".join(test.data.keys()))
-print(test["game"])
+
+with open("examplesave.json","w") as f:
+	f.write(test.json)
