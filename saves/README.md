@@ -7,6 +7,7 @@ Programs for save export, import and modification.
  - `libsave.py` *(lib)* - Includes a save loading library with exports (currently only to JSON).
  - `*.lua` - any .lua files are needed to ease issues with parsing lume.lua serialized tables.
  - `savetojson.py` - currently outputs all available savefile keys and converts `examplelua.save` to `examplesave.json`
+ - `jsontosave.py` - outputs all savefile keys and attempts to reconstruct the save that resulted in `examplesave.json`
 
 ## Explanation
 
@@ -16,5 +17,5 @@ rxi's LUME library is used to serialize the data. `loader.lua` simply deserializ
 
 libsave simply reads this and moves some keys around. All of the data remains as in the original save.
 
-When lua export is implemented, it will load the JSON and turn it back into lua (using `dumper.lua` or a similarly named helper).
+Lua export loads the JSON and turn it back into lua (using `dumper.lua` as a helper).
 
